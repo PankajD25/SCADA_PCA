@@ -227,6 +227,8 @@ def main():
             
             # Update progress
             progress_bar.progress((i + 1) / len(turbines))
+
+            matplotlib.pyplot.close()
         
         st.success(f"✅ Generated {len(plots_data)} power curve plots!")
         
@@ -240,6 +242,7 @@ def main():
         
         if len(plots_data) > 2:
             st.info(f"Showing 2 of {len(plots_data)} plots. Download the ZIP file to get all plots.")
+            
         
         # Create download button
         st.header("📥 Download Results")
@@ -258,3 +261,4 @@ def main():
 if __name__ == "__main__":
 
     main()
+
