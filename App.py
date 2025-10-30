@@ -232,14 +232,14 @@ def main():
         
         # Display sample plots
         st.subheader("Sample Plots Preview")
-        sample_turbines = list(plots_data.keys())[:3]  # Show first 3 plots
+        sample_turbines = list(plots_data.keys())[:2]  # Show first 2 plots
         
         for turbine in sample_turbines:
             st.subheader(f"Turbine: {turbine}")
             st.pyplot(plots_data[turbine])
         
-        if len(plots_data) > 3:
-            st.info(f"Showing 3 of {len(plots_data)} plots. Download the ZIP file to get all plots.")
+        if len(plots_data) > 2:
+            st.info(f"Showing 2 of {len(plots_data)} plots. Download the ZIP file to get all plots.")
         
         # Create download button
         st.header("📥 Download Results")
@@ -256,4 +256,5 @@ def main():
         st.success("🎉 All plots generated successfully! Click the download button to get your PNG files with Site and Week information in filenames.")
 
 if __name__ == "__main__":
+
     main()
