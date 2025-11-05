@@ -229,7 +229,7 @@ def main():
             # Update progress
             progress_bar.progress((i + 1) / len(turbines))
 #####################################################################################################################################
-            matplotlib.pyplot.close()
+        matplotlib.pyplot.close()
         
         st.success(f"✅ Generated {len(plots_data)} power curve plots!")
         
@@ -262,6 +262,7 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
 
 
